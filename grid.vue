@@ -8,7 +8,7 @@
       :start-page="filterSlot.startPage"
       :to-page="filterSlot.toPage"
       :filter-principal="filterSlot.filterPrincipal"
-      :top-pagination="true"
+      :top-paginate="false"
       @reload="$refs['meta-ads-table'].refresh()"
     >
       <b-table
