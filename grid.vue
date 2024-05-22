@@ -247,10 +247,10 @@ export default {
 
         const params = {
           search_text: this.filterSlot.filterPrincipal.model,
-          ad_type: this.getFilterValueByKey("ad_type"),
-          date_from: this.getFilterValueByKey("date_from"),
-          date_to: this.getFilterValueByKey("date_to"),
-          program_id: this.getFilterValueByKey("program_id"),
+          ad_type: this.getFilterByKey("ad_type").model,
+          date_from: this.getFilterByKey("date_from").model,
+          date_to: this.getFilterByKey("date_to").model,
+          program_id: this.getFilterByKey("program_id").model,
           npage: this.filterSlot.paginate.currentPage,
           perpage: this.filterSlot.paginate.perPage,
           orderby: orderBy,
@@ -272,8 +272,8 @@ export default {
         this.showErrorSwal(error);
       }
     },
-    getFilterValueByKey(key) {
-      return this.filterSlot.Filters.find((filter) => filter.key === key).model;
+    getFilterByKey(key) {
+      return this.filterSlot.Filters.find((filter) => filter.key === key);
     },
     getVariantByAdType(adType) {
       const types = {
