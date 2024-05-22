@@ -3,7 +3,7 @@
     <b-modal
       ref="modal-appointments-grid"
       size="lg"
-      @hidden="\$emit('hidden')"
+      @hidden="$emit('hidden')"
       no-close-on-backdrop
     >
       <template #modal-title>
